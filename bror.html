@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="no">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Guidebook - Professional AI Learning</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="logo-section">
+        <span class="logo-icon">⚡</span>
+        <h1>AI Guidebook</h1>
+      </div>
+      <nav>
+        <a href="#intro" class="nav-link">Hva er AI?</a>
+        <a href="#uses" class="nav-link">Bruksområder</a>
+        <a href="#tools" class="nav-link">Verktøy</a>
+        <a href="#learning" class="nav-link">Læring</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section fade-in">
+      <div class="hero-content">
+        <h2 class="hero-title">Kunstig Intelligens Guidebook</h2>
+        <p class="hero-subtitle">Lær alt du trenger å vite om AI-teknologi</p>
+        <button class="cta-button" onclick="scrollToSection('#intro')">Start her</button>
+      </div>
+      <div class="floating-elements">
+        <div class="float-element"></div>
+        <div class="float-element"></div>
+        <div class="float-element"></div>
+      </div>
+    </section>
+
+    <section id="intro" class="content-section fade-in">
+      <div class="section-content">
+        <h2>Hva er kunstig intelligens?</h2>
+        <p>
+          Kunstig intelligens (AI) er teknologi som gjør at maskiner kan lære,
+          analysere data og ta beslutninger basert på informasjonen de mottar.
+          AI-systemer brukes idag til å løse komplekse problemer og automatisere oppgaver.
+        </p>
+        <div class="highlight-box">
+          <strong>Nøkkelbegrep:</strong> Machine Learning er en undergren av AI som fokuserer på å gi maskiner evnen til å lære fra data uten eksplisitt programmering.
+        </div>
+      </div>
+    </section>
+
+    <section id="uses" class="content-section fade-in">
+      <div class="section-content">
+        <h2>Bruksområder for AI</h2>
+        <div class="grid-container">
+          <div class="grid-card" onclick="expandCard(this)">
+            <h3>🤖 Chatbots</h3>
+            <p>Automatisert kundeservice og kommunikasjon</p>
+          </div>
+          <div class="grid-card" onclick="expandCard(this)">
+            <h3>👁️ Bildegjenkjenning</h3>
+            <p>Analyse og klassifisering av bilder</p>
+          </div>
+          <div class="grid-card" onclick="expandCard(this)">
+            <h3>🚗 Selvkjørende biler</h3>
+            <p>Autonom navigasjon og objektdeteksjon</p>
+          </div>
+          <div class="grid-card" onclick="expandCard(this)">
+            <h3>📊 Anbefalingssystemer</h3>
+            <p>Personalisert innholdsforslag</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="content-section fade-in">
+      <div class="section-content">
+        <h2>Populære AI-verktøy og Plattformer</h2>
+        <div class="tools-container">
+          <div class="tool-item" onclick="showToolDetail(0)">
+            <div class="tool-icon">🤖</div>
+            <h3>ChatGPT</h3>
+            <p>Konversasjons-AI fra OpenAI</p>
+          </div>
+          <div class="tool-item" onclick="showToolDetail(1)">
+            <div class="tool-icon">🎨</div>
+            <h3>DALL-E</h3>
+            <p>AI-generert bildeproduksjon</p>
+          </div>
+          <div class="tool-item" onclick="showToolDetail(2)">
+            <div class="tool-icon">✏️</div>
+            <h3>GitHub Copilot</h3>
+            <p>AI-assistert kodeutvikling</p>
+          </div>
+          <div class="tool-item" onclick="showToolDetail(3)">
+            <div class="tool-icon">🧠</div>
+            <h3>TensorFlow</h3>
+            <p>Framework for machine learning</p>
+          </div>
+        </div>
+        <p id="toolOutput" class="tool-output"></p>
+      </div>
+    </section>
+
+    <section id="learning" class="content-section fade-in">
+      <div class="section-content">
+        <h2>Hvordan komme i gang</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Lær Grunnleggende</h3>
+            <p>Start med å forstå hva AI og machine learning er</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Utforsk Verktøy</h3>
+            <p>Eksperimenter med tilgjengelige AI-plattformer</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Praksis</h3>
+            <p>Bygg prosjekter og løs reelle problemer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-section fade-in">
+      <button class="accessibility-btn" onclick="toggleColorBlindMode()">
+        👁️ Tilgjengelighetsmodus (fargeblind)
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 AI Guidebook | Profesjonell AI-utdanning</p>
+    <p class="footer-subtitle">Skapt for å demystifisere kunstig intelligens</p>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbotWidget">
+    <div class="chatbot-header" onclick="toggleChatbot()">
+      <span>🤖 AI Assistant</span>
+      <span class="chatbot-toggle" id="chatbotToggle">−</span>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="message bot-message">
+        <p>Hei! Jeg er din AI assistant. Hva vil du vite om AI?</p>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <input type="text" id="chatbotInput" placeholder="Skriv spørsmål..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Chat Button -->
+  <button class="floating-chat-btn" onclick="toggleChatbot()" id="floatingChatBtn">
+    💬
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
