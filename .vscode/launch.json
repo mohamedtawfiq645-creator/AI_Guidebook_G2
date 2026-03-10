@@ -3,20 +3,20 @@
     "configurations": [
         {
             "name": "Launch with local server",
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "url": "http://localhost:8000/index.html",
             "preLaunchTask": "start-http-server"
         },
         {
             "name": "Open Front Page (file)",
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/index.html"
         },
         {
             "name": "Open Content Page (file)",
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/bror.html"
         }
