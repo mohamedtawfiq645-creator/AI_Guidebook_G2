@@ -2,21 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Edge",
-            "port": 9222,
-            "request": "attach",
-            "type": "msedge",
-            "webRoot": "${workspaceFolder}"
+            "name": "Launch with local server",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://localhost:8000/index.html",
+            "preLaunchTask": "start-http-server"
         },
         {
-            "name": "Open Front Page",
-            "type": "chrome",
+            "name": "Open Front Page (file)",
+            "type": "pwa-chrome",
             "request": "launch",
             "file": "${workspaceFolder}/index.html"
         },
         {
-            "name": "Open Content Page",
-            "type": "chrome",
+            "name": "Open Content Page (file)",
+            "type": "pwa-chrome",
             "request": "launch",
             "file": "${workspaceFolder}/bror.html"
         }
