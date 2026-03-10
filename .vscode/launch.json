@@ -2,20 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch with local server",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:8000/index.html",
-            "preLaunchTask": "start-http-server"
-        },
-        {
-            "name": "Open Front Page (file)",
+            "name": "Open Front Page",
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/index.html"
         },
         {
-            "name": "Open Content Page (file)",
+            "name": "Open Content Page",
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceFolder}/bror.html"
