@@ -244,6 +244,11 @@ main {
   50% { transform: scale(1.1); }
 }
 
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 /* Content Sections */
 .content-section {
   background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 52, 96, 0.6) 100%);
